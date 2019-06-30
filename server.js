@@ -13,8 +13,8 @@ var PORT = process.env.PORT || 8080;
 var db = require("./models");
 
 // Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(express.urlencoded({ extended: true })); // these two app.use statements allows us to access
+app.use(express.json());                         // the req.body in the api-routes.js "app.post" event
 
 // Sets up request logging
 app.use(logger("dev"));
